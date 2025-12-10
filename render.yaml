@@ -15,7 +15,4 @@ services:
         value: false
       - key: LOG_LEVEL
         value: error
-      # You'll set DB and APP_KEY in Render dashboard (or add below if you prefer)
-    skipAutoDependencyInstallation: false
-
-  # Optional: You can also define your PostgreSQL DB here, but easier to create separately
+ 
