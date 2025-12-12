@@ -4,6 +4,13 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
+// routes/api.php
+use Illuminate\Http\Request;
+
+// Handle preflight OPTIONS requests for all API routes
+Route::options('/{any}', function () {
+    return response()->noContent();
+})->where('any', '.*');
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
